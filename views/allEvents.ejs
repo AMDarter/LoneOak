@@ -1,0 +1,44 @@
+<% include ./partials/headeradmin %>
+
+          <h2  style="float:left;">Events</h2>        
+          <a class="btn btn-md btn-primary" style="float:right;" href="events/new">Add a New Event</a>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Delete</th>
+                  <th>Name</th>
+                  <th>Created</th>
+                  <th>Time</th>
+                  <th>Date</th>
+                  <th>Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% events.forEach(function (event) { %>
+                <tr>
+                  <td>
+                    <form class="delete-form" action="./events/<%= event._id %>?_method=DELETE" method="POST">
+                      <button class="btn btn-sm btn-danger btn-square">
+                        <i class="far fa-trash-alt"></i> Delete</button>
+                    </form>  
+                  </td>
+                  <td><%= event.name %></td>
+                  <td><%= moment(event.createdAt).fromNow() %></td>
+                  <td><%= event.time %></td>
+                  <td><%= event.date %></td>
+                  <td>
+                    <a class="btn btn-sm btn-warning btn-square" href="/events/<%= event._id %>/edit">
+                      <i class="far fa-edit"></i> Edit</a>
+                  </td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+<% include ./partials/footeradmin %>

@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+
+    <div class="bar-top mt-5">
+        <div class="container">
+        </div>
+    </div>
+    <div class="bar-top-2">
+        <div class="container">
+        </div>
+    </div>
+<div class="container"><!--Container-->
+
+<div class="row mt-5">
+        <div class="col-md-3">
+            <div class="list-group">
+                <li class="list-group-item side">Information Goes Here
+                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                </li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= event.image %>">
+                <div class="caption-full">
+                    <h4><a><%= event.name %></a></h4>
+                    <hr>
+                    <p>
+                        <i class="far fa-calendar-alt redIcon"></i> Date: <strong><%= event.date %></strong>
+                        <br>
+                        <i class="far fa-clock redIcon"></i> Time: <strong><%= event.time %></strong>
+                    </p>
+                    <hr>
+                    <p><%= event.description %></p>
+                    <% if(currentUser && currentUser.isAdmin){ %>
+                        <hr>
+                        <p>
+                         Created <%= moment(event.createdAt).fromNow() %>
+                        </p>
+                        <hr>
+                        <a class="btn btn-lg btn-warning btn-square" href="/events/<%= event._id %>/edit">
+                            <i class="far fa-edit"></i> Edit</a>
+                        <form class="delete-form" action="/events/<%= event._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-lg btn-danger btn-square">
+                                <i class="far fa-trash-alt"></i> Delete</button>
+                        </form>
+                    <% } %>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

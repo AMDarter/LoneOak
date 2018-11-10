@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+
+<div class="container form">
+    <br> 
+        <h1 class="mb-3 forest-text text-center"><i class="far fa-calendar-alt"></i></h1> 
+        <form action="/events/<%= event._id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+          <h1 class="h3 mb-4 font-weight-normal forest-text text-center">Edit <%= event.name %></h1>
+        <div class="form-group">
+            <label for="name">Event name:</label>
+            <input class="form-control" type="text" name="name" value="<%= event.name %>" required autofocus>
+        </div>
+        <label for="image">Image:</label>
+        <div class="input-group">
+            <div class="input-group-prepend mb-3">
+                <span class="input-group-text">Upload</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" id="image" name="image" accept="image/*">
+                <label class="custom-file-label" for="image">New image (optional)</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date">Date of event:</label>
+            <input class="form-control" type="text" name="date" value="<%= event.date %>" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time of event:</label>
+            <input class="form-control" type="text" name="time" value="<%= event.time %>" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description: (optional)</label>
+            <textarea class="form-control" rows="5" type="text" name="description" placeholder="description"><%= event.description %></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block btn-square btn-blue">Submit</button>
+        </div>
+        </form>
+</div>
+
+<% include ../partials/footer2 %>

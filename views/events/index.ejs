@@ -1,0 +1,55 @@
+<!--events-->
+<% include ../partials/header %>
+
+    <div class="bar-top">
+        <div class="container">
+        </div>
+    </div>
+    <div class="bar-top-2">
+        <div class="container">
+        </div>
+    </div>
+
+<div class="container"><!--Container-->
+
+    <header>
+        <div class="card mt-5 mb-3 marine">
+            <div class="card-body">
+            <h1><i class="fab fa-fly"></i> Upcoming Events</h1>
+<% if(currentUser && currentUser.isAdmin){ %>
+                <hr>
+                <p>
+                   <a class="btn btn-light btn-lg" href="/events/new"><i class="fas fa-plus"></i> Add a New Event</a>
+                </p>
+<% } %>    
+            </div>
+        </div>
+    </header>
+
+<!--Events-->
+<div class="row text-center">   
+    <% events.forEach(function(event){ %>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mt-2">
+             <a href="/events/<%= event._id %>">
+                <img class="card-img-top" src="<%= event.image %>" alt="<%= event.name %> image"> 
+             </a> 
+              <div class="card-body">
+                <a href="/events/<%= event._id %>">
+                    <h5 class="card-title"><%= event.name %></h5>
+                </a>
+                <p>
+                <i class="far fa-calendar-alt feather-text"></i> Date: <strong><%= event.date %></strong>
+                <br>
+                <i class="far fa-clock feather-text"></i> Time: <strong><%= event.time %></strong>
+                </p>
+                <p class="card-text"><%= event.description.substring(0, 50) %> ...</p>
+                <a href="/events/<%= event._id %>" class="btn btn-light"><i class="fas fa-info-circle">
+                </i> More info</a>
+              </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+        
+<% include ../partials/footer %>

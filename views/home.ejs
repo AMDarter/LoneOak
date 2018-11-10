@@ -1,0 +1,139 @@
+<% include ./partials/header %>
+    
+<!--Carousel-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide d-block carousel-img" src="./assets/carousel-1.jpg" alt="First slide">
+              <div class="carousel-caption text-left d-none d-md-block">
+                <div class="jumbotron caption-color">
+                  <h1 class="big-text">Lone Oak Baptist Church</h1>
+                  <p><a class="btn btn-lg btn-light" href="#worship" role="button">Worship 11am</a></p>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide d-block carousel-img" src="./assets/carousel-2.jpg" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <div class="jumbotron caption-color">
+                  <h1>John 3:16</h1>
+                  <p>For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
+                  <p><a class="btn btn-lg btn-light" href="#sunday" role="button">Sunday School 9:30am</a></p>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide d-block carousel-img" src="./assets/carousel-3.jpg" alt="Third slide">
+              <div class="carousel-caption text-right d-none d-md-block">
+                <div class="jumbotron caption-color">
+                  <h1>Jeremiah 17:14</h1>
+                  <p>Heal me, Lord, and I will be healed;
+                    save me and I will be saved,
+                    for you are the one I praise.</p>
+                  <p><a class="btn btn-lg btn-light" href="#wedbible" role="button">Wednesday Bible 7pm</a></p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+
+        <header class="card mb-5 gradient">
+          <div class="container">
+            <div class="card-body">
+                <h1>Lone Oak Baptist Church</h1>
+            </div>
+          </div>
+        </header>
+
+
+      <div class="container">
+
+        <!-- Three columns of circles-->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ccfcc13bfcdfca6f54a8e043ffbe075&auto=format&fit=crop&w=750&q=80" alt="Generic placeholder image" width="140" height="140">
+            <h2>Events</h2>
+            <p>View the latest upcoming events.</p>
+            <p><a class="btn btn-light" href="/events" role="button">Upcoming Events &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1490332695540-5acc256ec383?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b19b44bb362f8b2983105925510105de&auto=format&fit=crop&w=750&q=80" alt="Generic placeholder image" width="140" height="140">
+            <h2>About</h2>
+            <p>Everything about our church.</p>
+            <p><a class="btn btn-light" href="/about" role="button">About our Church &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle mb-3" src="https://images.unsplash.com/photo-1527067669193-6a36380de229?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=075d07fb2cee915ef07dee0d73cbdd54&auto=format&fit=crop&w=636&q=80" alt="Generic placeholder image" width="140" height="140">
+            <h2>Contact</h2>
+            <p>Reach out and connect with us or stop by for a visit we would love to have you.</p>
+            <p><a class="btn btn-light" href="/contact" role="button">Contact Info &raquo;</a></p>
+          </div>
+        </div>
+
+        <!-- START THE FEATURETTES -->
+
+        <hr id="worship" class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Worship 11am</h2>
+            <p class="lead">Information goes here.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lectus vestibulum, venenatis risus sit amet, porta magna. Quisque ut erat tristique, ornare sem in, dictum mi. Aliquam at erat tincidunt, finibus enim non, facilisis nulla.</p>
+            <p>Maecenas maximus eros risus, non consequat lectus convallis non. Sed interdum in dui et rhoncus. Fusce non leo eget lorem placerat ultricies nec sit amet ligula. In scelerisque maximus metus id finibus. Nam nulla metus, fringilla sed urna non, cursus ornare ante. In sodales lorem sit amet lorem porttitor viverra. Nulla vel pharetra lorem.</p>
+            <p>Sed scelerisque id metus id semper. Donec nec lacinia lacus. Cras in ex maximus, finibus nisl vel, egestas quam. Aliquam feugiat sapien vel dolor facilisis, nec elementum sapien malesuada. Sed lorem lorem, vulputate non lacus vel, commodo maximus felis.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="./assets/worship.jpg" alt="image">
+          </div>
+        </div>
+
+        <hr id="sunday" class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Sunday School 9:30am</h2>
+            <p class="lead">Information goes here.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lectus vestibulum, venenatis risus sit amet, porta magna. Quisque ut erat tristique, ornare sem in, dictum mi.</p>
+            <p>Aliquam at erat tincidunt, finibus enim non, facilisis nulla. Maecenas maximus eros risus, non consequat lectus convallis non. Sed interdum in dui et rhoncus. Fusce non leo eget lorem placerat ultricies nec sit amet ligula.</p>
+            <p>In scelerisque maximus metus id finibus. Nam nulla metus, fringilla sed urna non, cursus ornare ante. In sodales lorem sit amet lorem porttitor viverra. Nulla vel pharetra lorem. Sed scelerisque id metus id semper. Donec nec lacinia lacus. Cras in ex maximus, finibus nisl vel, egestas quam. Aliquam feugiat sapien vel dolor facilisis, nec elementum sapien malesuada. Sed lorem lorem, vulputate non lacus vel, commodo maximus felis.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="./assets/sundayschool.jpg" alt="image">
+          </div>
+        </div>
+
+        <hr id="wedbible" class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Wednesday Bible 7:00pm</h2>
+            <p class="lead">Information goes here.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lectus vestibulum, venenatis risus sit amet, porta magna.</p>
+            <p>Quisque ut erat tristique, ornare sem in, dictum mi. Aliquam at erat tincidunt, finibus enim non, facilisis nulla. Maecenas maximus eros risus, non consequat lectus convallis non. Sed interdum in dui et rhoncus.</p>
+            <p>Fusce non leo eget lorem placerat ultricies nec sit amet ligula. In scelerisque maximus metus id finibus. Nam nulla metus, fringilla sed urna non, cursus ornare ante. In sodales lorem sit amet lorem porttitor viverra. Nulla vel pharetra lorem. Sed scelerisque id metus id semper. Donec nec lacinia lacus. Cras in ex maximus, finibus nisl vel, egestas quam. Aliquam feugiat sapien vel dolor facilisis, nec elementum sapien malesuada. Sed lorem lorem, vulputate non lacus vel, commodo maximus felis.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="./assets/bible.jpg" alt="image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+
+<% include ./partials/footer %>
